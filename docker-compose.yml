@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  spark-app:
+    image: my-spark-app
+    container_name: spark-app-container
+    volumes:
+      - ./src/app.py:/app/app.py
+      - ./src/run.sh:/app/run.sh
+      - ./src/spotify-tracks-dataset.csv:/app/spotify-tracks-dataset.csv
+      - ./data/bronze:/app/data/bronze
+      - ./data/silver:/app/data/silver
+      - ./data/gold:/app/data/gold
+      - ./logs:/app/logs
+    tty: true
+    stdin_open: true
