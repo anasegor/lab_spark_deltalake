@@ -3,8 +3,10 @@ Run:
 docker build -t my-spark-app .
 docker-compose run spark-app /app/run.sh
 ```
-Viewing logs:
+Logs :
 
 ```
 cat ./logs/output.log
 ```
+
+MLflow logs are in ./logs/mlruns
